@@ -3,23 +3,23 @@
 import java.util.Scanner;
 
 public class E01652A {
-    public static void main(String[] args) {
-        double diametro, altura, pi, raio, area, volume, horas, enchimento;
-        Scanner teclado = new Scanner(System.in);
-        System.out.println(
-                "O programa vai falar o tempo em horas que poï¿½o artesiano levarï¿½ para encher a piscina eo tamanho da lona circular");
-        System.out.print("Informe a altura da piscina: ");
-        altura = teclado.nextDouble();
-        System.out.print("Informe o diï¿½metro da piscina: ");
-        diametro = teclado.nextDouble();
-        pi = 3.1416;
-        raio = diametro / 2;
-        area = pi * Math.pow(raio, 2);
-        volume = area * (altura - 0.1);
-        enchimento = 2.7;
-        horas = volume / enchimento;
-        System.out.println("Lona circular em m2 = " + area + "\nTempo em horas = " + horas);
-        teclado.close();
-    }
+	public static void main(String[] args) {
+		double diametro, altura, pi, raio, area, volume, horas, enchimento;
+		Scanner teclado = new Scanner(System.in);
+		System.out.println(
+				"O programa vai falar o tempo em horas que poço artesiano levará para encher a piscina eo tamanho da lona circular");
+		System.out.print("Informe a altura da piscina: ");
+		altura = teclado.nextDouble();
+		System.out.print("Informe o diâmetro da piscina: ");
+		diametro = teclado.nextDouble();
+		pi = 3.1416;
+		raio = diametro / 2;
+		area = pi * Math.pow(raio, 2);
+		volume = area * (altura - 0.1);
+		enchimento = 2.7;
+		horas = volume / enchimento;
+		System.out.println("Lona circular em m2 = " + area + "\nTempo em horas = " + horas);
+		teclado.close();
+	}
 
 }
