@@ -1,0 +1,149 @@
+html {
+    scroll-behavior: smooth;
+    margin-left: 15px;
+    margin: 15px;
+   
+}
+
+/* ======== NAVBAR =========*/
+
+.navbar {
+    color: white;
+    background-color:#2808b8;
+    
+}
+
+/* ======== SECTION BANNER =========*/
+
+.banner {
+    height: 100vh;
+    /* ref. imagem: https://www.pexels.com/pt-br/foto/alcatrao-alvorecer-amanhecer-arvore-163688/ */
+    background-image: url(../img/bg.png);
+    /* aqui alinha nos eixos horizontal e vertical */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative*/
+    position: relative;
+}
+
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #2C7BBD;
+    opacity: 0.6;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute*/
+    position: absolute;
+}
+
+.banner-elementos {
+    margin-top: 30vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner h1 {
+    color: gold;
+    font-size: 4.5rem;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    padding: 30px 15px;
+    color: white;
+}
+#life h1,h2{
+    color: #2C7BBD;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* ======== SECTION CARREIRA =========*/
+
+#carreira {
+    margin-top: 50px;
+}
+
+#carreira h2 {
+    color: #2C7BBD;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#carreira h4 {
+    color: #2C7BBD;
+}
+
+#mais {
+    display: none;
+}
+.final{
+    margin: 30px;
+}
+/* ======== FOOTER =========*/
+
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2.2rem;
+}
+
+footer .card-body {
+    background-color: #2C7BBD;
+    color: gold;
+}
+
+#ajuda span {
+    margin-left: 10px;
+}
+
+/* ======== BACK TO TOP =========*/
+
+.back-to-top {
+    background: green;
+    color: white;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    clip-path: circle();
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto 1fr auto;
+    }
+    .banner p {
+        font-size: 0.75rem;
+        
+        color: white;
+    }
+}
