@@ -1,0 +1,37 @@
+
+--1)
+select PILOTO_ID, NOME, PAIS_ORIGEM
+from PILOTO
+where NOME like 'A%' or NOME like 'F%'
+
+--2)
+select NOME, LEN(NOME) AS QTD_CARACTERES
+from PILOTO
+
+--3)
+select REVERSE(NOME) as NOME_INVERTIDO
+from PILOTO
+
+--4)
+SELECT NOME, right(NOME,3)
+FROM EQUIPE
+
+--5)
+SELECT *
+FROM GRANDE_PREMIO
+
+select  MONTH(DATA), PAIS
+from GRANDE_PREMIO 
+GROUP BY DATA, PAIS
+ORDER BY DATA DESC
+
+--6)
+
+select *
+from GRANDE_PREMIO
+where (PAIS like 'A%'  or PAIS like 'E%'  or PAIS like 'I%'   or PAIS like 'O%'  or PAIS like 'U%') AND DAY(DATA)<10 
+ 
+
+--7)
+SELECT DATEDIFF(MONTH, DATA, GETDATE() )
+FROM GRANDE_PREMIO
