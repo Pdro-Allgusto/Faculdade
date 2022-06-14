@@ -1,8 +1,7 @@
 .text 
 
-li $v0, 4 
 la $a0, printHelloWord
-
+li $v0, 4 
 syscall 
 
 .data
