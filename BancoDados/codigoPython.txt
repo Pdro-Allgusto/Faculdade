@@ -1,0 +1,61 @@
+import pyodbc
+
+from googletrans import Translator
+
+def get_sql_connection():
+    server = r"DESKTOP-K6EO9EV\SQLEXPRESS"
+    database = "FAKENAMES"
+    driver = "{SQL Server}"
+    string_conexao = f'Driver={driver};'\
+                     f'database={database};'\
+                     f'server={server};'\
+                     f'Trusted_Connection=yes;'
+
+    return pyodbc.connect( string_conexao)
+
+
+conexao = get_sql_connection()
+cursor = conexao.cursor()
+
+nome_colunas = []
+dados = []
+
+def get_sql_nomesColunas():
+    sql = "Select * from sys.columns WHERE object_id= object_id('PESSOA')"
+    cursor.execute(sql)
+    linhas = cursor.fetchall()
+
+    for linha in linhas:
+        nome_colunas.append(linha[1])
+
+
+def read_all():
+    sql = "Select * from PESSOA"
+    cursor.execute(sql)
+    linhas = cursor.fetchall()
+
+    file = open("file.csv", "w+")
+
+    string_saida =''
+
+
+    for coluna in nome_colunas:
+        string_saida += f'{coluna}' + ' '
+
+    file.write(string_saida )
+    file.write('\n')
+
+    for linha in linhas:
+        string_saida =''
+        for coluna in nome_colunas:
+            string_saida += f"{linha.__getattribute__(coluna)}" + ' '
+
+
+        file.write(string_saida)
+        file.write('\n')
+
+    file.close()
+
+
+get_sql_nomesColunas()
+read_all()
