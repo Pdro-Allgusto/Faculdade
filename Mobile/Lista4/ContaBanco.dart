@@ -21,20 +21,20 @@ class ContaBancaria {
     if (ValorSaque > Saldo_) {
       Saldo_ += Limite_;
       if (ValorSaque > Saldo_) {
-        print("Saldo Insuficiente!");
+        print("Saldo Insuficiente");
       } else {
         Saldo_ -= ValorSaque;
-        print("Você tem $Saldo_ na conta $NumeroConta");
+        print("Você tem $Saldo_ reais na conta $NumeroConta");
       }
     } else {
       Saldo_ -= ValorSaque;
-      print("Você tem $Saldo_ na conta $NumeroConta");
+      print("Você tem $Saldo_ reais na conta $NumeroConta");
     }
   }
 
   depositar(ValorDeposito) {
     Saldo_ += ValorDeposito;
-    print("Foi depositado $ValorDeposito na conta $NumeroConta");
+    print("Foi depositado $ValorDeposito reais na conta $NumeroConta");
   }
 
   transferir() {}
