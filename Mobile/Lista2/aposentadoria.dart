@@ -1,4 +1,5 @@
 import 'dart:io';
+
 void main() {
   int tempoTrabalhado = 0, idade = 0;
   print("Qual é a matrícula do funcionário?");
@@ -11,13 +12,13 @@ void main() {
   int ano = int.parse(stdin.readLineSync()!);
   tempoTrabalhado = ano - trabalhado;
   idade = ano - nascimento;
-  if(tempoTrabalhado >= 30){
+  if (tempoTrabalhado >= 30) {
     print("Requerer aposentadoria");
-  }else if(idade >= 65){
+  } else if (idade >= 65) {
     print("Requerer aposentadoria");
-  }else if(idade >= 60 && tempoTrabalhado >= 25){
+  } else if (idade >= 60 && tempoTrabalhado >= 25) {
     print("Requerer aposentadoria");
-  }else{
+  } else {
     print("Não requerer aposentadoria");
   }
 }

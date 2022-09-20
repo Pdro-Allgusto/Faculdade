@@ -1,4 +1,5 @@
 import 'dart:io';
+
 void main() {
   print("Qual a altura do retângulo?");
   double alt = double.parse(stdin.readLineSync()!);
