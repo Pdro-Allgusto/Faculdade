@@ -30,14 +30,18 @@ class ContaBancaria {
       Saldo_ -= ValorSaque;
       print("Você tem $Saldo_ reais na conta $NumeroConta");
     }
+    return Saldo_;
   }
 
   depositar(ValorDeposito) {
     Saldo_ += ValorDeposito;
     print("Foi depositado $ValorDeposito reais na conta $NumeroConta");
+    return Saldo_;
   }
 
   transferir() {}
 
-  ImprimirConta() {}
+  ImprimirConta(Conta) {
+    print("Número da conta: $Conta\nNome do cliente: $Nome_Cliente\nSaldo :$Saldo_\nLimite de crédito disponível:$Limite_");
+  }
 }
