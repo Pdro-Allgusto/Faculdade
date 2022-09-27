@@ -42,12 +42,14 @@ class ContaBancaria {
 
   transferir(
       ContaBancaria contaRecebe, ContaBancaria contaEnvia, double valor) {
-      contaEnvia.sacar(valor);
-      contaRecebe.depositar(valor);
+    contaEnvia.sacar(valor);
+    contaRecebe.depositar(valor);
   }
 
-  ImprimirConta() {
+  void ImprimirConta() {
+    print("===================================");
     print(
         "Número da conta: $getNumero_Conta\nNome do cliente: $getNome_Cliente\nSaldo :$getSaldo\nLimite de crédito disponível:$getLimite");
+    print("===================================");
   }
 }
